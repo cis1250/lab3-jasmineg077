@@ -43,12 +43,15 @@ words = clean_sentence.split()
 
 #lists for their words and their frequencies
 unique_words = []
-frequencies = []
+frequencies = [idx] += 1
 
 #interates through words and count frequency
 for word in words:
     if word in unique_words:
         idx = unique_words.index(word)
+        frequencies[idx] += 1
+    else: 
+        unique_words.append(word)
         frequencies.append(1)
 
 for i in range(len(unique_words)):
