@@ -34,4 +34,18 @@ user_sentence = input("Enter a sentence: ")
 while (is_sentence(user_sentence) == False):
     print("This does not meet the criteria for a sentence.")
     user_input = input("Enter a sentence: ")
-    
+
+clean_sentence = re.sub(r'[^\w\s]', '', user_sentence).lower()
+
+words = clean_sentence.split()
+
+unique_words = []
+frequencies = []
+
+for word in words:
+    if word in unique_words:
+        idx = unique_words.index(word)
+        frequencies.append(1)
+
+for i in range(len(unique_words)):
+    print(f"{unique_words[i]}: {frequencies[i]}")
