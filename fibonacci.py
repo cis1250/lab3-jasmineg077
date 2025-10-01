@@ -13,7 +13,7 @@ while True:
 
   n = int(user_input)
   a, b = 0, 1
-  for 1 in range(n):
+  for i in range(n):
       print(a, end="")
       a, b = b, a + b
   print()
